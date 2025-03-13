@@ -123,3 +123,32 @@ Button.MouseButton1Click:Connect(function()
         TextBox.Text = "Key inválida!"
     end
 end)
+
+
+local HttpService = game:GetService("HttpService")
+
+-- Pegando o user_id do jogador
+local player = game.Players.LocalPlayer
+local userId = player.UserId  -- ID do jogador no Roblox
+
+-- Aqui o script vai pegar a chave do jogador automaticamente
+local chave = "AQUI_VAI_A_CHAVE_DO_JOGADOR"  -- A chave do jogador será recuperada automaticamente do servidor
+
+-- Enviar os dados para o servidor Flask
+local url = "http://193.186.4.238:5000/executar"  -- URL do servidor Flask
+
+local dados = {
+    user_id = userId,
+    key = chave  -- A chave que o jogador recebeu vai ser automaticamente preenchida aqui
+}
+
+-- Enviar a requisição POST
+local sucesso, resposta = pcall(function()
+    return HttpService:PostAsync(url, HttpService:JSONEncode(dados), Enum.HttpContentType.ApplicationJson)
+end)
+
+if sucesso then
+    print("Execução registrada com sucesso.")
+else
+    print("Erro ao registrar execução.")
+end
