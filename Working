@@ -117,7 +117,7 @@ Button.MouseButton1Click:Connect(function()
     local userInput = TextBox.Text
     if isValidKey(userInput) then
         ScreenGui:Destroy()
-        setclipboard("https://discord.gg/RUPPFN5Jh7")
+        setclipboard("https://discord.gg/C9wvxXYvXb")
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Dekistermurgan/Xit-dos-Guri/refs/heads/main/Project%20Delta"))()
     else
         TextBox.Text = "Key inválida!"
