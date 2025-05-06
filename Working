@@ -2,7 +2,7 @@ local KeyValid,KeyPremium, KeysystemLibrary, KeyGuardLibrary = false,false,loads
 
 KeyGuardLibrary.Set({
 	publicToken = "f8da2dc0480e4e25be9aa4f87c2fcbf6",
-	privateToken = "123be9d02da14eecba8718e575c7169d",
+	privateToken = "1234be9d02da14eecba8718e575c7169d",
 	trueData = "your trueData",
 	falseData = "your falseData",
 })
